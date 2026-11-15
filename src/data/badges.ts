@@ -13,7 +13,7 @@ export const badges: BadgeDefinition[] = [
     href: "https://medrinnn.dev",
     label: "medrinnn.dev",
     background: "#16171d",
-    border: "#94a2ff",
+    border: "#f2a7b3",
     textColor: "#e9e9ee",
   },
   {
@@ -33,11 +33,11 @@ export const badges: BadgeDefinition[] = [
     textColor: "#b7f7c8",
   },
   {
-    text: "codeberg",
-    href: "https://codeberg.org/medrinnn",
-    label: "medrinnn on Codeberg",
-    background: "#1d2b4f",
-    border: "#8ab4ff",
-    textColor: "#e6eeff",
+    text: "twitter",
+    href: "https://x.com/medrinnn",
+    label: "@medrinnn on Twitter",
+    background: "#0f1419",
+    border: "#1d9bf0",
+    textColor: "#e7f5ff",
   },
 ];

@@ -30,9 +30,7 @@ export function Home() {
         <h2 id="socials-heading">Find me online</h2>
         <ul className={styles.socials}>
           {socials.map((social) => (
-            <li key={social.label}>
-              <SocialLink {...social} />
-            </li>
+            <SocialLink key={social.label} {...social} />
           ))}
         </ul>
       </section>

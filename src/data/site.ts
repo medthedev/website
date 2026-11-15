@@ -1,4 +1,4 @@
-import { siBluesky, siChessdotcom, siCodeberg, siGithub, siSteam } from "simple-icons";
+import { siGithub, siSteam, siX } from "simple-icons";
 import type { SimpleIcon } from "simple-icons";
 
 export const site = {
@@ -24,33 +24,21 @@ export interface Social {
 
 export const socials: Social[] = [
   {
-    label: "Codeberg",
-    handle: "medrinnn",
-    href: "https://codeberg.org/medrinnn",
-    icon: siCodeberg,
-  },
-  {
     label: "GitHub",
-    handle: "medrinnn",
-    href: "https://github.com/medrinnn",
+    handle: "medthedev",
+    href: "https://github.com/medthedev",
     icon: siGithub,
   },
   {
-    label: "Bluesky",
-    handle: "@medrinnn.bsky.social",
-    href: "https://bsky.app/profile/medrinnn.bsky.social",
-    icon: siBluesky,
+    label: "Twitter",
+    handle: "@medrinnn",
+    href: "https://x.com/medrinnn",
+    icon: siX,
   },
   {
     label: "Steam",
     handle: "medrinnn",
     href: "https://steamcommunity.com/id/medrinnn/",
     icon: siSteam,
-  },
-  {
-    label: "Chess.com",
-    handle: "medrinnn",
-    href: "https://www.chess.com/member/medrinnn",
-    icon: siChessdotcom,
   },
 ];
