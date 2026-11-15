@@ -30,6 +30,7 @@ Then open <http://localhost:5173>.
 | ------------------- | ------------------------------------------------------------- |
 | `bun run dev`       | Start the Vite dev server                                     |
 | `bun run build`     | Type-check, build to `dist/`, and write the SPA fallback page |
+| `bun run deploy`    | Build and publish `dist/` to the `gh-pages` branch            |
 | `bun run preview`   | Preview the production build locally                          |
 | `bun run lint`      | Run ESLint                                                    |
 | `bun run typecheck` | Type-check without emitting                                   |
@@ -68,16 +69,24 @@ theme before first paint to avoid a flash. All design tokens are defined in
 
 ## Deployment
 
-The build output in `dist/` is completely static. The included workflow
-(`.github/workflows/deploy.yml`) publishes it to GitHub Pages on every push to
-`main`, built with `VITE_BASE=/` because the site is served from the root of
-`medrinnn.dev`.
+The site is published from the `gh-pages` branch with
+[`gh-pages`](https://github.com/tschaub/gh-pages). That branch contains only the
+compiled output, so GitHub Pages can serve it directly without running a build.
+
+```bash
+bun run deploy
+```
+
+The command builds to `dist/` and force-pushes the result to `gh-pages`.
+`.github/workflows/deploy.yml` runs the same command on every push to `main` and on
+manual dispatches.
 
 `scripts/postbuild.ts` copies `index.html` to `404.html`, which lets deep links such
-as `/about` boot the client-side router. `public/CNAME` records the custom domain so
-other static hosts keep using it.
+as `/about` boot the client-side router. `public/CNAME` records the custom domain, so
+every deploy keeps `medrinnn.dev` configured.
 
-Enable Pages with **Settings → Pages → Source: GitHub Actions** before the first run.
+> The `gh-pages` branch is generated. Don't edit it by hand — run `bun run deploy`
+> instead.
 
 ### Custom domain with Porkbun
 
@@ -107,9 +116,10 @@ Pages handles the `www` → apex redirect once both names are configured.
 
 Then in GitHub, open **Settings → Pages**:
 
-1. Set **Source** to **GitHub Actions**.
-2. Enter `medrinnn.dev` under **Custom domain** and click **Save**.
-3. Wait for the DNS check to pass, then enable **Enforce HTTPS**. Certificate
+1. Set **Source** to **Deploy from a branch**.
+2. Choose the **`gh-pages`** branch and the **`/ (root)`** folder, then **Save**.
+3. Enter `medrinnn.dev` under **Custom domain** and click **Save**.
+4. Wait for the DNS check to pass, then enable **Enforce HTTPS**. Certificate
    provisioning can take up to 24 hours, but usually takes a few minutes.
 
 Check propagation from a terminal:
@@ -128,7 +138,7 @@ To serve from `https://medthedev.github.io/website/` (no custom domain), build w
 base path so assets resolve under the subdirectory:
 
 ```bash
-VITE_BASE=/website/ bun run build
+VITE_BASE=/website/ bun run deploy
 ```
 
 Set a repository variable named `VITE_BASE` to `/website/` so the workflow uses the
