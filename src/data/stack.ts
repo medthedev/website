@@ -4,7 +4,6 @@ import {
   siCplusplus,
   siGit,
   siGo,
-  siHyprland,
   siJavascript,
   siOpenjdk,
   siPython,
@@ -74,7 +73,6 @@ export const stack: TechGroup[] = [
     name: "Linux & tools",
     items: [
       { name: "Arch Linux", href: "https://archlinux.org", icon: siArchlinux },
-      { name: "Hyprland", href: "https://hyprland.org", icon: siHyprland },
       { name: "Git", href: "https://git-scm.com", icon: siGit },
     ],
   },
