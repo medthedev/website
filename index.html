@@ -10,7 +10,7 @@
       content="The personal site of med — a self-taught developer who loves free software, self-hosting, privacy, and making things."
     />
     <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="theme-color" content="#030712" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="med's site" />
     <meta
@@ -32,7 +32,7 @@
           root.dataset.themePreference = preference;
           document
             .querySelector('meta[name="theme-color"]')
-            ?.setAttribute("content", dark ? "#0a0a0a" : "#fafafa");
+            ?.setAttribute("content", dark ? "#030712" : "#f8fafc");
         } catch {
           document.documentElement.dataset.theme = "dark";
         }
