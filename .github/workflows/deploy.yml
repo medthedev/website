@@ -32,9 +32,10 @@ jobs:
       - name: Build
         run: bun run build
         env:
-          # Set a repository variable named VITE_BASE to "/" when using a custom
-          # domain. Otherwise GitHub project pages are served from /<repo>/.
-          VITE_BASE: ${{ vars.VITE_BASE || format('/{0}/', github.event.repository.name) }}
+          # The site is served from the root of the custom domain (medrinnn.dev).
+          # Set a repository variable named VITE_BASE to "/<repo>/" if you ever
+          # deploy to GitHub project pages instead (user.github.io/<repo>/).
+          VITE_BASE: ${{ vars.VITE_BASE || '/' }}
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
