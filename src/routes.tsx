@@ -4,6 +4,7 @@ import { RootLayout } from "@/components/layout/RootLayout";
 
 import { About } from "./pages/About";
 import { Home } from "./pages/Home";
+import { NotFound } from "./pages/NotFound";
 import { Tech } from "./pages/Tech";
 
 // BASE_URL is "/" at the root and "/repo/" when hosted on GitHub project pages.
@@ -18,6 +19,7 @@ export const router = createBrowserRouter(
         { index: true, element: <Home /> },
         { path: "about", element: <About /> },
         { path: "tech", element: <Tech /> },
+        { path: "*", element: <NotFound /> },
       ],
     },
   ],
