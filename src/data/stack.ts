@@ -19,6 +19,8 @@ export interface TechItem {
   name: string;
   href: string;
   icon: SimpleIcon;
+  /** Optional brand color override for logos that are black by default. */
+  color?: string;
 }
 
 export interface TechGroup {
@@ -56,9 +58,9 @@ export const stack: TechGroup[] = [
     name: "Learning",
     items: [
       { name: "Go", href: "https://go.dev", icon: siGo },
-      { name: "Rust", href: "https://www.rust-lang.org", icon: siRust },
+      { name: "Rust", href: "https://www.rust-lang.org", icon: siRust, color: "dea584" },
       { name: "C++", href: "https://isocpp.org", icon: siCplusplus },
-      { name: "Java", href: "https://openjdk.org", icon: siOpenjdk },
+      { name: "Java", href: "https://openjdk.org", icon: siOpenjdk, color: "e76f00" },
     ],
   },
   {

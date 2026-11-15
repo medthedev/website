@@ -10,14 +10,13 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    name: "muslimcli",
-    owner: "medrinnn",
+    name: "website",
+    owner: "medthedev",
     description:
-      "A Rust CLI for prayer times and other Muslim utilities — fetches daily timings, saves your config, and plays the adhan when it's time.",
-    language: "Rust",
-    languageColor: "#dea584",
-    href: "https://codeberg.org/medrinnn/muslimcli",
-    stars: 2,
+      "The source for this site — a small, dependency-light React and TypeScript portfolio built with Vite and Bun.",
+    language: "TypeScript",
+    languageColor: "#3178c6",
+    href: "https://github.com/medthedev/website",
   },
   {
     name: "salat",
@@ -27,14 +26,5 @@ export const projects: Project[] = [
     language: "Python",
     languageColor: "#3572a5",
     href: "https://github.com/medrinnn/salat",
-  },
-  {
-    name: "website",
-    owner: "medthedev",
-    description:
-      "The source for this site — a small, dependency-light React and TypeScript portfolio built with Vite and Bun.",
-    language: "TypeScript",
-    languageColor: "#3178c6",
-    href: "https://github.com/medthedev/website",
   },
 ];

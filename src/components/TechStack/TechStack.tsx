@@ -1,5 +1,8 @@
-import { BrandIcon } from "../BrandIcon/BrandIcon";
+import type { CSSProperties } from "react";
+
 import { stack } from "@/data/stack";
+
+import { BrandIcon } from "../BrandIcon/BrandIcon";
 import styles from "./TechStack.module.css";
 
 export function TechStack() {
@@ -16,10 +19,15 @@ export function TechStack() {
                   href={item.href}
                   target="_blank"
                   rel="noreferrer"
+                  aria-label={item.name}
                   title={item.name}
+                  style={
+                    {
+                      "--brand": `#${item.color ?? item.icon.hex}`,
+                    } as CSSProperties
+                  }
                 >
-                  <BrandIcon icon={item.icon} size={15} />
-                  <span>{item.name}</span>
+                  <BrandIcon icon={item.icon} size={32} />
                 </a>
               </li>
             ))}

@@ -12,16 +12,23 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
   return (
     <a className={styles.card} href={href} target="_blank" rel="noreferrer">
-      <span className={styles.header}>
-        <span className={styles.owner}>{owner}</span>
-        <span className={styles.slash} aria-hidden="true">
-          /
-        </span>
-        <span className={styles.name}>{name}</span>
-        <ArrowUpRightIcon width={15} height={15} className={styles.arrow} />
+      <ArrowUpRightIcon width={15} height={15} className={styles.arrow} />
+
+      <span className={styles.author}>
+        <img
+          src={`https://github.com/${owner}.png?size=64`}
+          alt=""
+          width={20}
+          height={20}
+          loading="lazy"
+          decoding="async"
+          referrerPolicy="no-referrer"
+        />
+        <span>{owner}</span>
       </span>
 
-      <p className={styles.description}>{description}</p>
+      <h3 className={styles.name}>{name}</h3>
+      <span className={styles.description}>{description}</span>
 
       <span className={styles.meta}>
         <span className={styles.metaItem}>
