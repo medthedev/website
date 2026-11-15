@@ -30,6 +30,9 @@
           const root = document.documentElement;
           root.dataset.theme = dark ? "dark" : "light";
           root.dataset.themePreference = preference;
+          document
+            .querySelector('meta[name="theme-color"]')
+            ?.setAttribute("content", dark ? "#14151a" : "#f7f6f3");
         } catch {
           document.documentElement.dataset.theme = "dark";
         }

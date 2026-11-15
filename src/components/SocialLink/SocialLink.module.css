@@ -12,6 +12,10 @@
   background-color: var(--surface-2);
 }
 
+.link:focus-visible {
+  outline-offset: -2px;
+}
+
 .icon {
   display: grid;
   flex: 0 0 auto;
