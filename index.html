@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="%BASE_URL%favicon.ico" sizes="any" />
+    <title>med's site</title>
+    <meta
+      name="description"
+      content="The personal site of med — a self-taught developer who loves free software, self-hosting, privacy, and making things."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#14151a" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="med's site" />
+    <meta
+      property="og:description"
+      content="The personal site of med — a self-taught developer who loves free software, self-hosting, privacy, and making things."
+    />
+    <meta name="darkreader-lock" />
+    <script>
+      // Set the theme before first paint to avoid a flash of the wrong theme.
+      (() => {
+        try {
+          const stored = localStorage.getItem("theme");
+          const preference = ["light", "dark", "system"].includes(stored) ? stored : "system";
+          const dark =
+            preference === "dark" ||
+            (preference === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+          const root = document.documentElement;
+          root.dataset.theme = dark ? "dark" : "light";
+          root.dataset.themePreference = preference;
+        } catch {
+          document.documentElement.dataset.theme = "dark";
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
