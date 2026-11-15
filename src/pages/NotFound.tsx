@@ -13,7 +13,7 @@ export function NotFound() {
   });
 
   return (
-    <Page>
+    <Page card>
       <div className={styles.wrapper}>
         <p className={styles.code}>404</p>
         <h1>This page wandered off.</h1>

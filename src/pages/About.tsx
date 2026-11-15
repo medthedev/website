@@ -11,7 +11,7 @@ export function About() {
   });
 
   return (
-    <Page>
+    <Page card>
       <article className={styles.about}>
         <header className={styles.intro}>
           <h1>About me</h1>

@@ -14,7 +14,7 @@ export function Tech() {
   });
 
   return (
-    <Page wide>
+    <Page wide card>
       <article>
         <header className={styles.intro}>
           <h1>Tech</h1>

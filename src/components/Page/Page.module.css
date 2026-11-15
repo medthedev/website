@@ -7,3 +7,19 @@
 .wide {
   width: min(100% - 2rem, 1080px);
 }
+
+.card {
+  background-color: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+}

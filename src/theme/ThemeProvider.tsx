@@ -8,8 +8,8 @@ const STORAGE_KEY = "theme";
 const DARK_MODE_QUERY = "(prefers-color-scheme: dark)";
 
 const THEME_COLORS: Record<ResolvedTheme, string> = {
-  light: "#f8fafc",
-  dark: "#030712",
+  light: "#ffffff",
+  dark: "#0a0a0a",
 };
 
 function readStoredPreference(): ThemePreference {

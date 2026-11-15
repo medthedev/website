@@ -1,6 +1,11 @@
 .header {
-  background-color: var(--surface);
-  border-bottom: 1px solid var(--border);
+  background-color: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
 
 .inner {
@@ -37,7 +42,7 @@
 }
 
 .active {
-  background-color: var(--background);
+  background-color: var(--surface);
   color: var(--text);
   box-shadow: var(--shadow-sm);
 }

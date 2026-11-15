@@ -11,7 +11,7 @@ export function Home() {
   usePageMeta({ title: site.title, description: site.description });
 
   return (
-    <Page>
+    <Page card>
       <section className={styles.hero}>
         <h1>
           Hi, I&apos;m <span>med!</span>
