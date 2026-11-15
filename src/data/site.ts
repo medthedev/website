@@ -1,4 +1,4 @@
-import { siGithub, siSteam, siX } from "simple-icons";
+import { siDiscord, siGithub, siSteam, siX } from "simple-icons";
 import type { SimpleIcon } from "simple-icons";
 
 export const site = {
@@ -34,6 +34,12 @@ export const socials: Social[] = [
     handle: "@medrinnn",
     href: "https://x.com/medrinnn",
     icon: siX,
+  },
+  {
+    label: "Discord",
+    handle: "medrinnn",
+    href: "https://discord.com/users/1280539117985333250",
+    icon: siDiscord,
   },
   {
     label: "Steam",
