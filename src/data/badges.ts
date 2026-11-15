@@ -13,7 +13,7 @@ export const badges: BadgeDefinition[] = [
     href: "https://medrinnn.dev",
     label: "medrinnn.dev",
     background: "#16171d",
-    border: "#f2a7b3",
+    border: "#7fb3ff",
     textColor: "#e9e9ee",
   },
   {
