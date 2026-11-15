@@ -10,7 +10,6 @@ import {
   siReact,
   siRust,
   siTypescript,
-  siVite,
 } from "simple-icons";
 import type { SimpleIcon } from "simple-icons";
 
@@ -64,10 +63,7 @@ export const stack: TechGroup[] = [
   },
   {
     name: "Web",
-    items: [
-      { name: "React", href: "https://react.dev", icon: siReact },
-      { name: "Vite", href: "https://vite.dev", icon: siVite },
-    ],
+    items: [{ name: "React", href: "https://react.dev", icon: siReact }],
   },
   {
     name: "Linux & tools",
