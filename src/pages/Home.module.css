@@ -6,33 +6,7 @@
   text-align: center;
 }
 
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.4rem 0.85rem;
-  background-color: var(--glass);
-  border: 1px solid var(--glass-border);
-  border-radius: 999px;
-  color: var(--text-muted);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  animation: rise 700ms ease-out both;
-}
-
-.statusDot {
-  width: 6px;
-  height: 6px;
-  background-color: #22c55e;
-  border-radius: 50%;
-  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.14);
-}
-
 .title {
-  margin-top: 1.5rem;
   font-size: clamp(2.9rem, 8vw, 5.5rem);
   font-weight: 700;
   letter-spacing: -0.05em;
@@ -109,19 +83,6 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.65rem;
   margin-top: 2rem;
-}
-
-.badgeSection {
-  display: flex;
-  justify-content: center;
-  margin-top: clamp(4rem, 10vw, 6rem);
-}
-
-.badges {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.4rem;
 }
 
 @keyframes rise {

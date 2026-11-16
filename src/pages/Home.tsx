@@ -1,12 +1,10 @@
 import { siGithub } from "simple-icons";
 import { Link } from "react-router";
 
-import { Badge } from "@/components/Badge/Badge";
 import { BrandIcon } from "@/components/BrandIcon/BrandIcon";
 import { ArrowRightIcon } from "@/components/icons/UiIcons";
 import { Page } from "@/components/Page/Page";
 import { SocialLink } from "@/components/SocialLink/SocialLink";
-import { badges } from "@/data/badges";
 import { site, socials } from "@/data/site";
 import { usePageMeta } from "@/hooks/usePageMeta";
 
@@ -18,11 +16,6 @@ export function Home() {
   return (
     <Page wide>
       <section className={styles.hero}>
-        <p className={styles.eyebrow}>
-          <span className={styles.statusDot} aria-hidden="true" />
-          open source · self-hosted · arch btw
-        </p>
-
         <h1 className={styles.title}>
           Hi, I&apos;m <span className={styles.name}>med</span>.
         </h1>
@@ -64,14 +57,6 @@ export function Home() {
             <SocialLink key={social.label} {...social} />
           ))}
         </ul>
-      </section>
-
-      <section className={styles.badgeSection} aria-label="Badges">
-        <div className={styles.badges}>
-          {badges.map((badge) => (
-            <Badge key={badge.label} {...badge} />
-          ))}
-        </div>
       </section>
     </Page>
   );
