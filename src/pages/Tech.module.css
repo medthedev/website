@@ -1,15 +1,26 @@
 .intro {
   max-width: 720px;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.kicker {
+  margin-bottom: 0.6rem;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .intro h1 {
-  font-size: clamp(2.25rem, 5vw, 3rem);
+  font-size: clamp(2.4rem, 5.5vw, 3.5rem);
   font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
 }
 
-.intro p {
+.intro p:not(.kicker) {
   margin-top: 1.1rem;
   color: var(--text-muted);
   font-size: 1.0625rem;
@@ -21,9 +32,17 @@
 }
 
 .section h2 {
-  font-size: 1.5rem;
-  font-weight: 650;
-  letter-spacing: -0.02em;
+  font-size: clamp(1.5rem, 3vw, 1.9rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.panel {
+  margin-top: 1.5rem;
+  padding: 1.4rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
 }
 
 .projects {
@@ -31,4 +50,10 @@
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 0.75rem;
   margin-top: 1.5rem;
+}
+
+@media (max-width: 520px) {
+  .panel {
+    padding: 1rem;
+  }
 }

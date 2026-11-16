@@ -13,14 +13,14 @@ export function NotFound() {
   });
 
   return (
-    <Page card>
+    <Page>
       <div className={styles.wrapper}>
         <p className={styles.code}>404</p>
         <h1>This page wandered off.</h1>
         <p className={styles.text}>
           The link may be broken, or the page may have moved somewhere else.
         </p>
-        <Link className={styles.homeLink} to="/">
+        <Link className="button button--glass" to="/">
           Take me home
         </Link>
       </div>

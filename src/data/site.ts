@@ -8,6 +8,7 @@ export const site = {
     "The personal site of med — a self-taught developer who loves free software, self-hosting, privacy, and making things.",
   url: "https://medrinnn.dev/",
   sourceUrl: "https://github.com/medthedev/website",
+  githubUrl: "https://github.com/medthedev",
 } as const;
 
 /** Builds a document title, e.g. "About — med's site". */

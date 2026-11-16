@@ -1,5 +1,9 @@
-import { NavLink } from "react-router";
+import { siGithub } from "simple-icons";
+import { Link, NavLink } from "react-router";
 
+import { site } from "@/data/site";
+
+import { BrandIcon } from "../BrandIcon/BrandIcon";
 import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
 import styles from "./NavBar.module.css";
 
@@ -13,7 +17,17 @@ export function NavBar() {
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
-        <nav aria-label="Main navigation">
+        <Link className={styles.brand} to="/" aria-label={`${site.name} — home`}>
+          <span className={styles.mark} aria-hidden="true">
+            m
+          </span>
+          <span className={styles.brandName}>
+            {site.name}
+            <span className={styles.brandDot}>.</span>
+          </span>
+        </Link>
+
+        <nav className={styles.nav} aria-label="Main navigation">
           <ul className={styles.links}>
             {links.map(({ to, label, end }) => (
               <li key={to}>
@@ -31,8 +45,17 @@ export function NavBar() {
           </ul>
         </nav>
 
-        <div className={styles.themeToggle}>
+        <div className={styles.actions}>
           <ThemeToggle />
+          <a
+            className={`button button--glass ${styles.github}`}
+            href={site.githubUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BrandIcon icon={siGithub} size={16} />
+            <span className={styles.githubLabel}>GitHub</span>
+          </a>
         </div>
       </div>
     </header>

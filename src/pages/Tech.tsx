@@ -14,9 +14,10 @@ export function Tech() {
   });
 
   return (
-    <Page wide card>
+    <Page wide>
       <article>
         <header className={styles.intro}>
+          <p className={styles.kicker}>Tech</p>
           <h1>Tech</h1>
           <p>
             I&apos;m a big fan of free and open source software, and I try to use FOSS
@@ -28,7 +29,9 @@ export function Tech() {
 
         <section className={styles.section} aria-labelledby="stack-heading">
           <h2 id="stack-heading">Tech stack</h2>
-          <TechStack />
+          <div className={styles.panel}>
+            <TechStack />
+          </div>
         </section>
 
         <section className={styles.section} aria-labelledby="projects-heading">

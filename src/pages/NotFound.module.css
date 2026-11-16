@@ -1,6 +1,11 @@
 .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 560px;
-  padding-block: 2rem 3rem;
+  margin-inline: auto;
+  padding-block: clamp(2rem, 8vw, 5rem);
+  text-align: center;
 }
 
 .code {
@@ -20,24 +25,8 @@
 }
 
 .text {
-  margin-top: 1rem;
+  margin: 1rem 0 1.75rem;
   color: var(--text-muted);
   font-size: 1.0625rem;
   line-height: 1.8;
-}
-
-.homeLink {
-  display: inline-flex;
-  margin-top: 1.75rem;
-  padding: 0.55rem 1rem;
-  background-color: var(--accent);
-  border-radius: 999px;
-  color: var(--accent-contrast);
-  font-size: 0.9375rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.homeLink:hover {
-  filter: brightness(1.08);
 }
