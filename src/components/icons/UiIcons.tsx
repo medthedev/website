@@ -55,33 +55,6 @@ export function ArrowRightIcon(props: IconProps) {
   );
 }
 
-export function CodeIcon(props: IconProps) {
-  return (
-    <svg {...baseProps} {...props}>
-      <path d="m16 18 6-6-6-6M8 6l-6 6 6 6" />
-    </svg>
-  );
-}
-
-export function ServerIcon(props: IconProps) {
-  return (
-    <svg {...baseProps} {...props}>
-      <rect x="2" y="3" width="20" height="7" rx="2" />
-      <rect x="2" y="14" width="20" height="7" rx="2" />
-      <path d="M6 6.5h.01M6 17.5h.01" />
-    </svg>
-  );
-}
-
-export function ShieldIcon(props: IconProps) {
-  return (
-    <svg {...baseProps} {...props}>
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
-      <path d="m9 12 2 2 4-4" />
-    </svg>
-  );
-}
-
 export function StarIcon(props: IconProps) {
   return (
     <svg {...baseProps} {...props}>

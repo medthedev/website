@@ -17,14 +17,8 @@ export function NavBar() {
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
-        <Link className={styles.brand} to="/" aria-label={`${site.name} — home`}>
-          <span className={styles.mark} aria-hidden="true">
-            m
-          </span>
-          <span className={styles.brandName}>
-            {site.name}
-            <span className={styles.brandDot}>.</span>
-          </span>
+        <Link className={styles.brand} to="/" aria-label="medrinnn — home">
+          medrinnn
         </Link>
 
         <nav className={styles.nav} aria-label="Main navigation">
