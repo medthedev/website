@@ -19,12 +19,12 @@ export const projects: Project[] = [
     href: "https://github.com/medthedev/website",
   },
   {
-    name: "salat",
-    owner: "medrinnn",
+    name: "muslimcli",
+    owner: "medthedev",
     description:
-      "A Python command-line prayer times tool. Fetches daily timings for your city and plays an adhan audio file when a prayer time is reached.",
-    language: "Python",
-    languageColor: "#3572a5",
-    href: "https://github.com/medrinnn/salat",
+      "A command line utility that has various islamic tools in the terminal to help you get closer to Allah.",
+    language: "Rust",
+    languageColor: "#DDA584",
+    href: "https://github.com/medthedev/muslimcli",
   },
 ];
